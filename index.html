@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script defer src="script.js"></script>
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+    <!-- 
+        << navigation >>
+    -->
+    <nav class="navbar navbar-expand-lg">
+        <a class="brand-link" href="#">
+            <img src="assets/images/brand-logo.svg" alt="360parkfinder logo" class="brand-logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="fa fa-bars"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+                <li class="menu-item" data-toggle="collapse" data-target=".navbar-collapse.show">
+                    <a class="menu-link orange" href="#">Explore</a>
+                </li>
+                <li class="menu-item" data-toggle="collapse" data-target=".navbar-collapse.show">
+                    <a class="menu-link blue" href="#">About</a>
+                </li>
+                <li class="menu-item" data-toggle="collapse" data-target=".navbar-collapse.show">
+                    <a class="menu-link orange" href="#">Suggestions</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- search input box -->
+    <form>
+        <div class="form-group input-group">
+            <input type="text" id="search_location" class="form-control" placeholder="Search location">
+            <div class="input-group-btn">
+                <button class="btn btn-default get_map" type="submit">
+                    Locate
+                </button>
+            </div>
+        </div>
+    </form>
+
+    <!-- display google map -->
+    <div id="geomap"></div>
+
+    <!-- display selected location information -->
+    <h4>Location Details</h4>
+    <p>Address: <input type="text" class="search_addr" size="45"></p>
+    <p>Latitude: <input type="text" class="search_latitude" size="30"></p>
+    <p>Longitude: <input type="text" class="search_longitude" size="30"></p>
+    <div id="capture"></div>
+
+    <!-- jq and jqui -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+    <!-- google maps api -->
+    <script type="text/javascript"
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyABCdxuohoNCTAYID3Ezeflhfk6-0wS5HU"></script>
+
+    <!-- bootstrap -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
