@@ -30,7 +30,7 @@
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="fa fa-bars"></span>
+            <i class="fa fa-bars"></i>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -48,27 +48,27 @@
         </div>
     </nav>
 
-    <!-- search input box -->
-    <form>
-        <div class="form-group input-group">
-            <input type="text" id="search_location" class="form-control" placeholder="Search location">
-            <div class="input-group-btn">
-                <button class="btn btn-default get_map" type="submit">
-                    Locate
-                </button>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 col-md-8">
+                <!-- search input box -->
+                <form class="search-form">
+                    <input type="text" id="search_location" class="form-control" placeholder="Search location">
+                    <button class="get_map search-submit" type="submit"><i class="fa fa-search"></i></button>
+                </form>
+
+                <!-- display google map -->
+                <div id="geomap"></div>
+            </div>
+
+            <div class="col-12 col-md-4">
+                <p class="current-marker">Current Marker</p>
+                <input type="text" class="search_addr" size="45">
+                <div id="capture"></div>
             </div>
         </div>
-    </form>
 
-    <!-- display google map -->
-    <div id="geomap"></div>
-
-    <!-- display selected location information -->
-    <h4>Location Details</h4>
-    <p>Address: <input type="text" class="search_addr" size="45"></p>
-    <p>Latitude: <input type="text" class="search_latitude" size="30"></p>
-    <p>Longitude: <input type="text" class="search_longitude" size="30"></p>
-    <div id="capture"></div>
+    </div>
 
     <!-- jq and jqui -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -77,7 +77,7 @@
 
     <!-- google maps api -->
     <script type="text/javascript"
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyABCdxuohoNCTAYID3Ezeflhfk6-0wS5HU"></script>
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBtOaC9baH4A7MZ4uYKb3O4gQDCOMAulck"></script>
 
     <!-- bootstrap -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"

@@ -20,6 +20,19 @@ function initialize() {
 
     map = new google.maps.Map(document.getElementById("geomap"), options);
 
+    var kmlsrc = 'https://drive.google.com/uc?export=view&id=1YGR7SiNaL_ekDvkA_8dyZvorQ75fGRfA';
+
+    var kmlLayer = new google.maps.KmlLayer(kmlsrc, {
+        suppressInfoWindows: true,
+        preserveViewport: true,
+        map: map
+    });
+    kmlLayer.addListener('click', function (event) {
+        var content = event.featureData.infoWindowHtml;
+        var testimonial = document.getElementById('capture');
+        testimonial.innerHTML = content;
+    });
+
     geocoder = new google.maps.Geocoder();
 
     marker = new google.maps.Marker({
@@ -36,25 +49,9 @@ function initialize() {
                 map.setCenter(results[0].geometry.location);
                 marker.setPosition(results[0].geometry.location);
                 $('.search_addr').val(results[0].formatted_address);
-                $('.search_latitude').val(marker.getPosition().lat());
-                $('.search_longitude').val(marker.getPosition().lng());
             }
         });
     });
-
-    var kmlsrc = 'https://drive.google.com/uc?export=view&id=1YGR7SiNaL_ekDvkA_8dyZvorQ75fGRfA';
-
-    var kmlLayer = new google.maps.KmlLayer(kmlsrc, {
-        suppressInfoWindows: true,
-        preserveViewport: false,
-        map: map
-    });
-    kmlLayer.addListener('click', function (event) {
-        var content = event.featureData.infoWindowHtml;
-        var testimonial = document.getElementById('capture');
-        testimonial.innerHTML = content;
-    });
-
 }
 
 $(document).ready(function () {
