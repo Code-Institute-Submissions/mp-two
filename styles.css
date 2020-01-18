@@ -39,9 +39,8 @@ h1 {
 
 .navbar-toggler {
     position: absolute;
-    top: 0;
-    right: .5rem;
-    margin-top: 30px;
+    top: 35px;
+    right: 10px;
 }
 
 .navbar-toggler i {
@@ -72,6 +71,12 @@ h1 {
     padding: .5rem;
     text-transform: lowercase;
     letter-spacing: 1px;
+    transition: color .2s ease-in-out;
+}
+
+.menu-link:hover {
+    text-decoration: none;
+    color: #ced4da;
 }
 
 /* ------------------------------------------- home / explore */
@@ -84,9 +89,6 @@ h1 {
 .form-control {
     background-color: #3d395a;
     color: white;
-    border-right: none;
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
 }
 
 .form-control::placeholder {
@@ -97,6 +99,12 @@ h1 {
 .form-control:focus {
     background-color: inherit;
     color: inherit;
+}
+
+#search_location {
+    border-right: none;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
 }
 
 .search-submit {
@@ -122,22 +130,86 @@ h1 {
 .current-marker {
     font-size: 1rem;
     margin-top: 1rem;
+    margin-bottom: 0;
     color: #ced4da;
 }
 
 .search_addr {
     width: 100%;
     background-color: #3d395a;
-    border: 1px solid #ced4da;
+    color: #ced4da;
+}
+
+.park-marker {
+    font-size: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 0;
     color: #ced4da;
 }
 
 #capture {
-    height: 360px;
+    height: auto;
+    min-height: 35px;
+    max-height: 200px;
     width: 100%;
-    margin-top: 1rem;
+    padding: 0.375rem 0.75rem;
+    word-wrap: break-word;
     overflow: hidden;
-    float: left;
-    border: thin solid #333;
-    border-left: none;
+    border: 1px solid #ced4da;
     }
+
+/* ------------------------------------------- footer */
+
+footer {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    background-color: #252741;
+    text-align: center;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    list-style-type: none;
+}
+
+.social-links-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    margin: 0 5px;
+    border-radius: 50%;
+    border: 1px solid #EBB73F;
+}
+
+.social-links-item a {
+    width: 100%;
+    color: #EBB73F;
+    transition: color .3s ease-in-out;
+}
+
+.social-links-item a:hover {
+    color: #EBB73F80;
+}
+
+.copyright {
+    color: #EBB73F80;
+    font-weight: 100;
+}
+
+@media (min-width: 992px) {
+    .brand-link {
+        margin-right: 30px;
+    }
+
+    .menu-item {
+        margin-right: 25px;
+    }
+
+    #geomap {
+        height: 60vh;
+    }
+  }

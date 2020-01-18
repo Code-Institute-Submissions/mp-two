@@ -1,3 +1,5 @@
+// code source (interactive maps) https://www.codexworld.com/autocomplete-location-search-box-google-maps-javascript-api-jquery-ui/
+
 var geocoder;
 var map;
 var marker;
@@ -20,6 +22,8 @@ function initialize() {
 
     map = new google.maps.Map(document.getElementById("geomap"), options);
 
+// code source (kml) https://developers.google.com/maps/documentation/javascript/kml
+
     var kmlsrc = 'https://drive.google.com/uc?export=view&id=1YGR7SiNaL_ekDvkA_8dyZvorQ75fGRfA';
 
     var kmlLayer = new google.maps.KmlLayer(kmlsrc, {
@@ -32,6 +36,8 @@ function initialize() {
         var testimonial = document.getElementById('capture');
         testimonial.innerHTML = content;
     });
+
+// code source (kml) end
 
     geocoder = new google.maps.Geocoder();
 
@@ -121,3 +127,5 @@ $(document).ready(function () {
         });
     });
 });
+
+// code source (interactive maps) end
