@@ -50,18 +50,42 @@
     </nav>
 
     <!-- main content -->
-<div class="content">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-12 landing">
-                <h1 class="landing-heading orange">welcome<span class="lh-sub blue"> to</span></h1>
-                <p class="landing-p orange">the one stop pop<br>for skatepark exploration.</p>
-                <a class="landing-cta" href="explore.html">explore</a>
-            </div>
 
+    <div class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-lg-8">
+
+                    <!-- search input box -->
+
+                    <p class="search-location-title">Search Location</p>
+                    <form class="search-form">
+                        <input type="text" id="search_location" class="form-control" placeholder="enter a location" autofocus>
+                        <button class="get_map search-submit" type="submit"><i class="fa fa-search"></i></button>
+                    </form>
+
+                    <!-- display google map -->
+
+                    <div id="geomap"></div>
+                </div>
+
+                <!-- location outputs -->
+
+                <div class="col-12 col-lg-4">
+
+                    <!-- orange marker output -->
+
+                    <p class="current-marker">Current Marker</p>
+                    <input type="text" class="search_addr form-control" placeholder="Search or drag orange marker">
+                    <p class="park-marker">Skatepark Marker</p>
+
+                    <!-- orange marker output -->
+
+                    <div id="capture"></div>
+                </div>
+            </div>
         </div>
     </div>
-</div>
 
     <!-- footer -->
 

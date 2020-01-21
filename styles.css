@@ -1,3 +1,5 @@
+/* ------------------------------------------- general */
+
 body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin: 0;
@@ -6,7 +8,11 @@ body {
     color: white;
 }
 
-/* ------------------------------------------- general */
+.content {
+    min-height: calc(100vh - 15.375rem);
+    display: flex;
+    align-items: center;
+}
 
 h1 {
     margin: 0;
@@ -69,7 +75,6 @@ h1 {
 .menu-link {
     display: block;
     padding: .5rem;
-    text-transform: lowercase;
     letter-spacing: 1px;
     transition: color .2s ease-in-out;
 }
@@ -79,11 +84,61 @@ h1 {
     color: #ced4da;
 }
 
-/* ------------------------------------------- home / explore */
+/* ------------------------------------------- landing */
+
+.landing {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.landing-heading {
+    font-size: 3rem;
+}
+
+.lh-sub {
+    font-size: 2rem;
+}
+
+.landing-p {
+    font-size: 1.2rem;
+    font-weight: lighter;
+    margin: 2rem 0;
+}
+
+.landing-cta {
+    background-color: #3FC9EB;
+    color: #3d395a;
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-top: 12px;
+    padding: 5px 40px;
+    border: 1px solid #252741;
+    border-radius: 20px;
+    transition: padding .3s ease-in-out;
+}
+
+.landing-cta:hover {
+    text-decoration: none;
+    color: #3d395a;
+    padding: 5px 60px;
+}
+
+/* ------------------------------------------- explore */
+
+.search-location-title {
+    font-size: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 0;
+    color: #ced4da;
+}
 
 .search-form {
     display: flex;
-    margin: 1rem 0;
+    margin-bottom: 1rem;
 }
 
 .form-control {
@@ -109,7 +164,7 @@ h1 {
 
 .search-submit {
     background-color: #3d395a;
-    width: 4rem;
+    width: 30%;
     border: 1px solid #ced4da;
     border-top-right-radius: .25rem;
     border-bottom-right-radius: .25rem;
@@ -120,7 +175,7 @@ h1 {
 }
 
 #geomap{
-    height: 360px;
+    height: 50vh;
     width: 100%;
     overflow: hidden;
     border: 1px solid #252741;
@@ -158,6 +213,14 @@ h1 {
     border: 1px solid #ced4da;
     }
 
+/* ------------------------------------------- about */
+
+.about {
+    text-align: left;
+    color: #ced4da;
+    font-size: 1.2rem;
+}
+    
 /* ------------------------------------------- footer */
 
 footer {
@@ -196,11 +259,15 @@ footer {
 }
 
 .copyright {
-    color: #EBB73F80;
+    color: #EBB73FC0;
     font-weight: 100;
 }
 
 @media (min-width: 992px) {
+    .container-fluid {
+        max-width: 80%;
+    }
+
     .brand-link {
         margin-right: 30px;
     }
