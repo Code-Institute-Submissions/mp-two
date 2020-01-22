@@ -24,7 +24,7 @@ function initialize() {
 
 // code source (kml) https://developers.google.com/maps/documentation/javascript/kml
 
-    var kmlsrc = 'assets/KML/skateparks.kml';
+    var kmlsrc = 'https://drive.google.com/uc?export=view&id=1YGR7SiNaL_ekDvkA_8dyZvorQ75fGRfA';
 
     var kmlLayer = new google.maps.KmlLayer(kmlsrc, {
         suppressInfoWindows: true,
