@@ -7,15 +7,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>360ParkFinder</title>
 
-    <script defer src="script.js"></script>
-
     <!-- bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
     <!-- font awesome -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="assets/styles/styles.css">
 
 </head>
 
@@ -36,13 +34,13 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav">
                     <li class="menu-item" data-toggle="collapse" data-target=".navbar-collapse.show">
-                        <a class="menu-link orange" href="explore.html">explore</a>
+                        <a class="menu-link blue" href="explore.html">explore</a>
                     </li>
                     <li class="menu-item" data-toggle="collapse" data-target=".navbar-collapse.show">
                         <a class="menu-link blue" href="about.html">about</a>
                     </li>
                     <li class="menu-item" data-toggle="collapse" data-target=".navbar-collapse.show">
-                        <a class="menu-link orange" href="suggestions.html">suggestions</a>
+                        <a class="menu-link blue" href="#" data-toggle="modal" data-target="#helpModal">help</a>
                     </li>
                 </ul>
             </div>
@@ -50,18 +48,48 @@
     </nav>
 
     <!-- main content -->
-<div class="content">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-12 landing">
-                <h1 class="landing-heading orange">welcome<span class="lh-sub blue"> to</span></h1>
-                <p class="landing-p orange">the one stop pop<br>for skatepark exploration.</p>
-                <a class="landing-cta" href="explore.html">explore</a>
-            </div>
+    <div class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 landing">
+                    <h1 class="landing-heading orange">welcome<span class="lh-sub blue"> to</span></h1>
+                    <p class="landing-p orange">the one stop pop<br>for skatepark exploration.</p>
+                    <a class="landing-cta" href="explore.html">explore</a>
+                </div>
 
+            </div>
         </div>
     </div>
-</div>
+
+
+    <!-- help modal -->
+
+    <div class="modal fade" id="helpModal" tabindex="-1" role="dialog" aria-labelledby="helpModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="helpModalLabel">How to explore</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <ol class="modal-list">
+                        <li class="modal-item">Navigate to the explore page.</li>
+                        <li class="modal-item">Type in a location and select from the dropdown list.</li>
+                        <li class="modal-item">Once the seletion has filled the input box, click/tap the search button!
+                        </li>
+                        <li class="modal-item">Zoom in a check out the parks in the area you have searched for.</li>
+                    </ol>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <a href="explore.html"><button type="button" class="btn btn-primary">Go there now</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- footer -->
 
@@ -71,13 +99,13 @@
                 <div class="col">
                     <ul class="social-links">
                         <li class="social-links-item">
-                            <a href="#">
+                            <a href="https://www.facebook.com/" target="_blank">
                                 <i class="fa fa-facebook" aria-hidden="true"></i>
                                 <span class="sr-only">Facebook</span>
                             </a>
                         </li>
                         <li class="social-links-item">
-                            <a href="#">
+                            <a href="https://www.instagram.com/" target="_blank">
                                 <i class="fa fa-instagram" aria-hidden="true"></i>
                                 <span class="sr-only">Instagram</span>
                             </a>
@@ -89,15 +117,8 @@
         </div>
     </footer>
 
-
-    <!-- jq and jqui -->
+    <!-- jq -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-
-    <!-- google maps api -->
-    <script type="text/javascript"
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD_QXSgBGXvkkR7ZxXBvKWsTufb1OErmS4"></script>
 
     <!-- bootstrap -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"

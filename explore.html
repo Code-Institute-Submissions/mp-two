@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>360ParkFinder</title>
 
-    <script defer src="script.js"></script>
+    <script defer src="assets/scripts/script.js"></script>
 
     <!-- bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -15,7 +15,7 @@
     <!-- font awesome -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="assets/styles/styles.css">
 
 </head>
 
@@ -42,7 +42,7 @@
                         <a class="menu-link blue" href="about.html">about</a>
                     </li>
                     <li class="menu-item" data-toggle="collapse" data-target=".navbar-collapse.show">
-                        <a class="menu-link orange" href="suggestions.html">suggestions</a>
+                        <a class="menu-link blue" href="#" data-toggle="modal" data-target="#helpModal">help</a>
                     </li>
                 </ul>
             </div>
@@ -60,7 +60,8 @@
 
                     <p class="search-location-title">Search Location</p>
                     <form class="search-form">
-                        <input type="text" id="search_location" class="form-control" placeholder="enter a location" autofocus>
+                        <input type="text" id="search_location" class="form-control" placeholder="enter a location"
+                            autofocus>
                         <button class="get_map search-submit" type="submit"><i class="fa fa-search"></i></button>
                     </form>
 
@@ -87,6 +88,35 @@
         </div>
     </div>
 
+    <!-- help modal -->
+
+    <div class="modal fade" id="helpModal" tabindex="-1" role="dialog" aria-labelledby="helpModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="helpModalLabel">How to explore</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <ol class="modal-list">
+                        <li class="modal-item">Navigate to the explore page.</li>
+                        <li class="modal-item">Type in a location and select from the dropdown list.</li>
+                        <li class="modal-item">Once the seletion has filled the input box, click/tap the search button!
+                        </li>
+                        <li class="modal-item">Zoom in a check out the parks in the area you have searched for.</li>
+                    </ol>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <a href="explore.html"><button type="button" class="btn btn-primary">Let's go</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- footer -->
 
     <footer>
@@ -95,13 +125,13 @@
                 <div class="col">
                     <ul class="social-links">
                         <li class="social-links-item">
-                            <a href="#">
+                            <a href="https://www.facebook.com/" target="_blank">
                                 <i class="fa fa-facebook" aria-hidden="true"></i>
                                 <span class="sr-only">Facebook</span>
                             </a>
                         </li>
                         <li class="social-links-item">
-                            <a href="#">
+                            <a href="https://www.instagram.com/" target="_blank">
                                 <i class="fa fa-instagram" aria-hidden="true"></i>
                                 <span class="sr-only">Instagram</span>
                             </a>

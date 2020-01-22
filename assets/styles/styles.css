@@ -5,7 +5,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #3d395a;
-    color: white;
+    color: #ced4da;
 }
 
 .content {
@@ -66,15 +66,10 @@ h1 {
     text-align: center;
 }
 
-.menu-item a span {
-    text-transform: initial;
-    letter-spacing: 1px;
-    font-weight: 300;
-}
-
 .menu-link {
     display: block;
     padding: .5rem;
+    font-size: 1.2rem;
     letter-spacing: 1px;
     transition: color .2s ease-in-out;
 }
@@ -104,7 +99,6 @@ h1 {
 
 .landing-p {
     font-size: 1.2rem;
-    font-weight: lighter;
     margin: 2rem 0;
 }
 
@@ -215,12 +209,49 @@ h1 {
 
 /* ------------------------------------------- about */
 
+.about-content {
+    min-height: calc(100vh - 15.375rem);
+    padding-top: 2rem;
+}
+
 .about {
     text-align: left;
     color: #ced4da;
     font-size: 1.2rem;
 }
-    
+
+/* ------------------------------------------- help modal */
+
+.modal-header, .modal-footer {
+    background-color: #252741;
+}
+
+.close, .close:hover {
+    color: #ced4da;
+}
+
+.modal-content {
+    background-color: #3d395a;
+}
+
+.btn {
+    color: #252741;
+    font-weight: bold;
+    border: none;
+}
+
+.btn:hover {
+    color: #ced4da;
+}
+
+.btn-secondary, .btn-secondary:hover {
+    background-color: #EBB73F;
+}
+
+.btn-primary, .btn-primary:hover {
+    background-color: #3FC9EB;
+}
+
 /* ------------------------------------------- footer */
 
 footer {
@@ -260,8 +291,9 @@ footer {
 
 .copyright {
     color: #EBB73FC0;
-    font-weight: 100;
 }
+
+/* ------------------------------------------- media queries */
 
 @media (min-width: 992px) {
     .container-fluid {
